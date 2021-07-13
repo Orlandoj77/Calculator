@@ -5,20 +5,34 @@ import {
   Article,
   Section,
   InputResult,
-  // Image,
+ 
 } from "./Styled";
-import fundo from "../Assets/Imagens/Fundo.svg";
 import { useState } from "react";
 function Calculator() {
-  const [changedValue, setchangedValue] = useState(0);
+  const [changedValue, setchangedValue] = useState("");
+  const [result, setResult] = useState("");
 
   function getData(e) {
-    let value = e.target.name;
-    setchangedValue(changedValue + value);
+   let value = e.target.name;
+   setchangedValue(changedValue + value);
+   let validValue = "123456789";
+
+  if (value === "=") {
+      if (!value.includes(validValue)) {
+     setchangedValue("");
+       setResult("");
+        setTimeout(() => {
+        alert("Deve conter números!");
+       }, 1000);
+        return;
+      }
+      setResult(eval(changedValue));
+    }
   }
 
   function clearData() {
-    setchangedValue(0);
+    setchangedValue("");
+    setResult("");
   }
 
   return (
@@ -34,6 +48,9 @@ function Calculator() {
               value={changedValue}
               readonly
             ></InputResult>
+            <label htmlFor="" style={{ fontSize: 30, color: "#FFF" }}>
+              {result}
+            </label>
             <Button
               className="btnlg btnclear"
               type="button"
@@ -42,10 +59,22 @@ function Calculator() {
             >
               C
             </Button>
-            <Button type="button" value="/" onclick="getData(this)">
+            <Button
+              type="button"
+              name="/"
+              onClick={(event) => {
+                getData(event);
+              }}
+            >
               /
             </Button>
-            <Button type="button" value="*" onclick="getData(this)">
+            <Button
+              type="button"
+              name="*"
+              onClick={(event) => {
+                getData(event);
+              }}
+            >
               *
             </Button>
             <Button
@@ -75,7 +104,13 @@ function Calculator() {
             >
               9
             </Button>
-            <Button type="button" value="-" onclick="getData(this)">
+            <Button
+              type="button"
+              name="-"
+              onClick={(event) => {
+                getData(event);
+              }}
+            >
               -
             </Button>
             <Button
@@ -108,8 +143,10 @@ function Calculator() {
             <Button
               class="btnplus"
               type="button"
-              value="+"
-              onclick="getData(this)"
+              name="+"
+              onClick={(event) => {
+                getData(event);
+              }}
             >
               +
             </Button>
@@ -140,7 +177,15 @@ function Calculator() {
             >
               3
             </Button>
-            <Button class="btnlg" type="button" value="=" onclick="calculate()">
+            <Button
+              class="btnlg"
+              type="button"
+              name="="
+              id="="
+              onClick={(event) => {
+                getData(event);
+              }}
+            >
               =
             </Button>
             <Button
@@ -152,8 +197,28 @@ function Calculator() {
             >
               0
             </Button>
-            <Button type="button" value="." onclick="getData(this)">
+            <Button type="button" name="." value="." onClick="getData(this)">
               .
+            </Button>
+            <Button
+              type="button"
+              name="("
+              value="."
+              onClick={(event) => {
+                getData(event);
+              }}
+            >
+              (
+            </Button>
+            <Button
+              type="button"
+              name=")"
+              value="."
+              onClick={(event) => {
+                getData(event);
+              }}
+            >
+              )
             </Button>
           </Article>
         </Section>

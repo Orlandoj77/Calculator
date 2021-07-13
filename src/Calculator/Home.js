@@ -12,13 +12,15 @@ function Calculator() {
   const [changedValue, setchangedValue] = useState("");
   const [result, setResult] = useState("");
 
+
+//retificar função.
   function getData(e) {
    let value = e.target.name;
    setchangedValue(changedValue + value);
    let validValue = "123456789";
 
   if (value === "=") {
-      if (!value.includes(validValue)) {
+      if (value.includes(validValue)) {
      setchangedValue("");
        setResult("");
         setTimeout(() => {
@@ -29,6 +31,8 @@ function Calculator() {
       setResult(eval(changedValue));
     }
   }
+//_____________________
+
 
   function clearData() {
     setchangedValue("");
@@ -37,7 +41,7 @@ function Calculator() {
 
   return (
     <Div>
-      {/* <Image src={fundo} /> */}
+  
       <Box>
         <Section>
           <Article className="calculator">

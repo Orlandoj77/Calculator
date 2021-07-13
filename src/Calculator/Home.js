@@ -8,7 +8,19 @@ import {
   // Image,
 } from "./Styled";
 import fundo from "../Assets/Imagens/Fundo.svg";
+import { useState } from "react";
 function Calculator() {
+  const [changedValue, setchangedValue] = useState(0);
+
+  function getData(e) {
+    let value = e.target.name;
+    setchangedValue(changedValue + value);
+  }
+
+  function clearData() {
+    setchangedValue(0);
+  }
+
   return (
     <Div>
       {/* <Image src={fundo} /> */}
@@ -19,13 +31,14 @@ function Calculator() {
               type="text"
               placeholder="0"
               id="result"
+              value={changedValue}
               readonly
             ></InputResult>
             <Button
               className="btnlg btnclear"
               type="button"
               value="c"
-              onclick="clean()"
+              onClick={clearData}
             >
               C
             </Button>
@@ -35,28 +48,60 @@ function Calculator() {
             <Button type="button" value="*" onclick="getData(this)">
               *
             </Button>
-            <Button type="button" value="7" onclick="getData(this)">
+            <Button
+              type="button"
+              name="7"
+              onClick={(event) => {
+                getData(event);
+              }}
+            >
               7
             </Button>
-            <Button type="button" value="8" onclick="getData(this)">
+            <Button
+              type="button"
+              name="8"
+              onClick={(event) => {
+                getData(event);
+              }}
+            >
               8
             </Button>
-            <Button type="button" value="9" onclick="getData(this)">
+            <Button
+              type="button"
+              name="9"
+              onClick={(event) => {
+                getData(event);
+              }}
+            >
               9
             </Button>
             <Button type="button" value="-" onclick="getData(this)">
               -
             </Button>
-            <Button type="button" value="4" onclick="getData(this)">
+            <Button
+              type="button"
+              name="4"
+              onClick={(event) => {
+                getData(event);
+              }}
+            >
               4
-            </Button>
-            <Button type="button" value="5" onclick="getData(this)">
-              5
             </Button>
             <Button
               type="button"
-              value="6"
-              onclick={(event) => console.log(event)}
+              name="5"
+              onClick={(event) => {
+                getData(event);
+              }}
+            >
+              5
+            </Button>
+            <Button
+              name="6"
+              type="button"
+              onClick={(event) => {
+                getData(event);
+              }}
             >
               6
             </Button>
@@ -68,19 +113,43 @@ function Calculator() {
             >
               +
             </Button>
-            <Button type="button" value="1" onclick="getData(this)">
+            <Button
+              type="button"
+              name="1"
+              onClick={(event) => {
+                getData(event);
+              }}
+            >
               1
             </Button>
-            <Button type="button" value="2" onclick="getData(this)">
+            <Button
+              type="button"
+              name="2"
+              onClick={(event) => {
+                getData(event);
+              }}
+            >
               2
             </Button>
-            <Button type="button" value="3" onclick="getData(this)">
+            <Button
+              type="button"
+              name="3"
+              onClick={(event) => {
+                getData(event);
+              }}
+            >
               3
             </Button>
             <Button class="btnlg" type="button" value="=" onclick="calculate()">
               =
             </Button>
-            <Button type="button" value="0" onclick="getData(this)">
+            <Button
+              type="button"
+              name="0"
+              onClick={(event) => {
+                getData(event);
+              }}
+            >
               0
             </Button>
             <Button type="button" value="." onclick="getData(this)">

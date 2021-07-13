@@ -45,7 +45,7 @@ export const Button = styled.button`
     width: 150px;
   }
   :active {
-    background: #ebc746;
+    background: #eb9d28;
     font-size: 24px;
   }
 

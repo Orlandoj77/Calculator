@@ -46,7 +46,7 @@ function Calculator() {
       <Box>
         <Section>
           <Article className="calculator">
-            <InputResult
+            <InputResult 
               type="text"
               placeholder="0"
               id="result"

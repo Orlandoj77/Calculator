@@ -8,6 +8,7 @@ import {
  
 } from "./Styled";
 import { useState } from "react";
+
 function Calculator() {
   const [changedValue, setchangedValue] = useState("");
   const [result, setResult] = useState("");
@@ -40,7 +41,7 @@ function Calculator() {
   }
 
   return (
-    <Div>
+    <Div >
   
       <Box>
         <Section>

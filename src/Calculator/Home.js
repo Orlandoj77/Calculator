@@ -29,6 +29,7 @@ function Calculator() {
        }, 1000);
         return;
       }
+      // eslint-disable-next-line no-eval
       setResult(eval(changedValue));
     }
   }
@@ -44,7 +45,9 @@ function Calculator() {
     <Div >
   
       <Box>
+        
         <Section>
+        <h1 style={{color:"#FFF", fontSize:15}}>Calculator</h1>
           <Article className="calculator">
             <InputResult 
               type="text"

@@ -6,6 +6,11 @@ export const Box = styled.div`
   justify-content: center;
   align-items: center;
 `;
+
+export const ClearButton = styled.button`
+  color: red;
+`;
+
 export const Input = styled.input`
   grid-column: span 4;
   height: 140px;
@@ -42,5 +47,3 @@ export const Div = styled.div`
   background-repeat: no-repeat;
   background-size: cover;
 `;
-
-export const Image = styled.img``;

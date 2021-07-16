@@ -1,4 +1,4 @@
-.button {
+.clear-btn {
   border-style: none;
   width: 75px;
   height: 75px;
@@ -12,12 +12,12 @@
   place-items: center;
 }
 
-.button:hover {
+.clear-btn:hover {
   transition: 0s;
   background: rgba(255, 255, 255, 0.05);
 }
 
-.clear-btn:after {
+.clear-btn::after {
   grid-column: span 2;
   width: 150px;
 }

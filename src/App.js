@@ -93,11 +93,11 @@ class App extends Component {
   };
   render() {
     return (
-      <Div className="calc-wrapper">
-        <Box className="App">
+      <Div className>
+        <Box>
           <Section>
             <h1 style={{ color: "#ffff", fontSize: 15 }}> Calculator</h1>
-            <Article className="row">
+            <Article className="calculator">
               <Input>{this.state.input}</Input>
               <ClearButton
                 className="btnlg btnclear"
@@ -105,20 +105,30 @@ class App extends Component {
               >
                 C
               </ClearButton>
+
+              <Button type="button" handleClick={this.divide}>
+                /
+              </Button>
+
+              <Button type="button" handleClick={this.multiply}>
+                *
+              </Button>
               <Button type="button" handleClick={this.addToInput}>
                 7
               </Button>
+
               <Button type="button" handleClick={this.addToInput}>
                 8
               </Button>
               <Button type="button" handleClick={this.addToInput}>
                 9
               </Button>
-              <Button type="button" handleClick={this.divide}>
-                /
-              </Button>
+
               <Button type="button" handleClick={this.addToInput}>
                 4
+              </Button>
+              <Button type="button" handleClick={this.subtract}>
+                -
               </Button>
               <Button type="button" handleClick={this.addToInput}>
                 5
@@ -126,23 +136,18 @@ class App extends Component {
               <Button type="button" handleClick={this.addToInput}>
                 6
               </Button>
-              <Button type="button" handleClick={this.multiply}>
-                *
-              </Button>
               <Button type="button" handleClick={this.addToInput}>
                 1
               </Button>
+              <Button type="button" handleClick={this.add}>
+                +
+              </Button>
+
               <Button type="button" handleClick={this.addToInput}>
                 2
               </Button>
               <Button type="button" handleClick={this.addToInput}>
                 3
-              </Button>
-              <Button type="button" handleClick={this.add}>
-                +
-              </Button>
-              <Button type="button" handleClick={this.subtract}>
-                -
               </Button>
               <Button type="button" handleClick={this.addZeroToInput}>
                 0

@@ -39,51 +39,51 @@ class App extends Component {
   };
 
   add = () => {
-    this.setState.previousNumber = this.state.input;
+    this.state.previousNumber = this.state.input;
     this.setState({ input: "" });
-    this.setState.operator = "plus";
+    this.state.operator = "plus";
   };
 
   subtract = () => {
-    this.setState.previousNumber = this.state.input;
+    this.state.previousNumber = this.state.input;
     this.setState({ input: "" });
-    this.setState.operator = "subtract";
+    this.state.operator = "subtract";
   };
 
   multiply = () => {
-    this.setState.previousNumber = this.state.input;
+    this.state.previousNumber = this.state.input;
     this.setState({ input: "" });
-    this.setState.operator = "multiply";
+    this.state.operator = "multiply";
   };
 
   divide = () => {
-    this.setState.previousNumber = this.state.input;
+    this.state.previousNumber = this.state.input;
     this.setState({ input: "" });
-    this.setState.operator = "divide";
+    this.state.operator = "divide";
   };
 
   evaluate = () => {
-    this.setState.currentNumber = this.state.input;
+    this.state.currentNumber = this.state.input;
 
-    if (this.state.operator === "plus") {
+    if (this.state.operator == "plus") {
       this.setState({
         input:
           parseInt(this.state.previousNumber) +
           parseInt(this.state.currentNumber),
       });
-    } else if (this.state.operator === "subtract") {
+    } else if (this.state.operator == "subtract") {
       this.setState({
         input:
           parseInt(this.state.previousNumber) -
           parseInt(this.state.currentNumber),
       });
-    } else if (this.state.operator === "multiply") {
+    } else if (this.state.operator == "multiply") {
       this.setState({
         input:
           parseInt(this.state.previousNumber) *
           parseInt(this.state.currentNumber),
       });
-    } else if (this.state.operator === "divide") {
+    } else if (this.state.operator == "divide") {
       this.setState({
         input:
           parseInt(this.state.previousNumber) /
@@ -91,7 +91,6 @@ class App extends Component {
       });
     }
   };
-
   render() {
     return (
       <Div className="calc-wrapper">
@@ -100,29 +99,56 @@ class App extends Component {
             <h1>Calculator</h1>
             <Article className="row">
               <Input>{this.state.input}</Input>
-              <label htmlFor="" style={{ fontSize: 30, color: "#FFF" }}></label>
 
-              <Button handleClick={this.addToInput}>7</Button>
-              <Button handleClick={this.addToInput}>8</Button>
-              <Button handleClick={this.addToInput}>9</Button>
-              <Button handleClick={this.divide}>/</Button>
-
-              <Button handleClick={this.addToInput}>4</Button>
-              <Button handleClick={this.addToInput}>5</Button>
-              <Button handleClick={this.addToInput}>6</Button>
-              <Button handleClick={this.multiply}>*</Button>
-
-              <Button handleClick={this.addToInput}>1</Button>
-              <Button handleClick={this.addToInput}>2</Button>
-              <Button handleClick={this.addToInput}>3</Button>
-              <Button handleClick={this.add}>+</Button>
-
-              <Button handleClick={this.addDecimal}>.</Button>
-              <Button handleClick={this.addZeroToInput}>0</Button>
-              <Button handleClick={this.evaluate}>=</Button>
-              <Button handleClick={this.subtract}>-</Button>
-
-              <ClearButton handleClear={this.clearInput}>Clear</ClearButton>
+              <Button type="button" handleClick={this.addToInput}>
+                7
+              </Button>
+              <Button type="button" handleClick={this.addToInput}>
+                8
+              </Button>
+              <Button type="button" handleClick={this.addToInput}>
+                9
+              </Button>
+              <Button type="button" handleClick={this.divide}>
+                /
+              </Button>
+              <Button type="button" handleClick={this.addToInput}>
+                4
+              </Button>
+              <Button type="button" handleClick={this.addToInput}>
+                5
+              </Button>
+              <Button type="button" handleClick={this.addToInput}>
+                6
+              </Button>
+              <Button type="button" handleClick={this.multiply}>
+                *
+              </Button>
+              <Button type="button" handleClick={this.addToInput}>
+                1
+              </Button>
+              <Button type="button" handleClick={this.addToInput}>
+                2
+              </Button>
+              <Button type="button" handleClick={this.addToInput}>
+                3
+              </Button>
+              <Button type="button" handleClick={this.add}>
+                +
+              </Button>
+              <Button type="button" handleClick={this.addDecimal}>
+                .
+              </Button>
+              <Button type="button" handleClick={this.addZeroToInput}>
+                0
+              </Button>
+              <Button type="button" handleClick={this.evaluate}>
+                =
+              </Button>
+              <Button type="button" handleClick={this.subtract}>
+                -
+              </Button>
+              <ClearButton handleClear={this.clearInput}>C</ClearButton>
             </Article>
           </Section>
         </Box>

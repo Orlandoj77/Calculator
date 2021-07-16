@@ -3,7 +3,7 @@ import "./Input.css";
 
 class Input extends Component {
   render() {
-    return <div className="Input">{this.props.children}</div>;
+    return <div className="input">{this.props.children}</div>;
   }
 }
 

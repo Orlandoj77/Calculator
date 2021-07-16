@@ -1,4 +1,4 @@
-Button {
+.button {
   border-style: none;
   width: 75px;
   height: 75px;
@@ -12,25 +12,25 @@ Button {
   place-items: center;
 }
 
-Button:hover {
+.button:hover {
   transition: 0s;
   background: rgba(255, 255, 255, 0.05);
 }
 
-Button::after {
+.clear-btn:after {
   grid-column: span 2;
   width: 150px;
 }
-Button:active {
+.clear-btn:active {
   background: #eb9d28;
   font-size: 24px;
 }
 
-Button::after {
+.clear-btn::after {
   grid-row: span 2;
   height: 150px;
 }
 
-Button::after {
+.clear-btn::after {
   background: rgba(255, 255, 255, 0.05);
 }

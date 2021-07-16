@@ -2,7 +2,7 @@
   border-style: none;
   width: 75px;
   height: 75px;
-  color: #fff;
+  color: rgb(238, 255, 0);
   font-size: 20px;
   user-select: none;
   border-top: 1px solid rgba(255, 255, 255, 0.05);
@@ -10,6 +10,7 @@
   outline: none;
   transition: 0.5s;
   place-items: center;
+  display: flex;
 }
 
 .clear-btn:hover {

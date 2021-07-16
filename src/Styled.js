@@ -7,25 +7,6 @@ export const Box = styled.div`
   align-items: center;
 `;
 
-export const ClearButton = styled.button`
-  color: red;
-`;
-
-export const Input = styled.input`
-  grid-column: span 4;
-  height: 140px;
-  width: 300px;
-  text-align: right;
-  background: transparent;
-  border: none;
-  outline: none;
-  padding: 10px;
-  font-size: 30px;
-  color: #fff;
-  border-top: 1px solid rgba(255, 255, 255, 0.05);
-  border-left: 1px solid rgba(255, 255, 255, 0.05);
-`;
-
 export const Section = styled.div`
   background: rgba(255, 255, 255, 0.05);
   border-radius: 6px;

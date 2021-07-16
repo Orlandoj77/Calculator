@@ -109,7 +109,6 @@ class App extends Component {
               <Button type="button" handleClick={this.divide}>
                 /
               </Button>
-
               <Button type="button" handleClick={this.multiply}>
                 *
               </Button>

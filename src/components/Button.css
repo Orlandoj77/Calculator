@@ -1,0 +1,36 @@
+Button {
+  border-style: none;
+  width: 75px;
+  height: 75px;
+  color: #fff;
+  font-size: 20px;
+  user-select: none;
+  border-top: 1px solid rgba(255, 255, 255, 0.05);
+  border-left: 1px solid rgba(255, 255, 255, 0.05);
+  outline: none;
+  transition: 0.5s;
+  place-items: center;
+}
+
+Button:hover {
+  transition: 0s;
+  background: rgba(255, 255, 255, 0.05);
+}
+
+Button::after {
+  grid-column: span 2;
+  width: 150px;
+}
+Button:active {
+  background: #eb9d28;
+  font-size: 24px;
+}
+
+Button::after {
+  grid-row: span 2;
+  height: 150px;
+}
+
+Button::after {
+  background: rgba(255, 255, 255, 0.05);
+}

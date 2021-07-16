@@ -6,7 +6,7 @@ export const Box = styled.div`
   justify-content: center;
   align-items: center;
 `;
-export const InputResult = styled.input`
+export const Input = styled.input`
   grid-column: span 4;
   height: 140px;
   width: 300px;
@@ -21,43 +21,6 @@ export const InputResult = styled.input`
   border-left: 1px solid rgba(255, 255, 255, 0.05);
 `;
 
-export const Button = styled.button`
-  background: transparent;
-  border-style: none;
-  width: 75px;
-  height: 75px;
-  color: #fff;
-  font-size: 20px;
-  user-select: none;
-  border-top: 1px solid rgba(255, 255, 255, 0.05);
-  border-left: 1px solid rgba(255, 255, 255, 0.05);
-  outline: none;
-  transition: 0.5s;
-  place-items: center;
-
-  :hover {
-    transition: 0s;
-    background: rgba(255, 255, 255, 0.05);
-  }
-
-  .btnlg {
-    grid-column: span 2;
-    width: 150px;
-  }
-  :active {
-    background: #eb9d28;
-    font-size: 24px;
-  }
-
-  .btnplus {
-    grid-row: span 2;
-    height: 150px;
-  }
-
-  .btnclear {
-    background: rgba(255, 255, 255, 0.05);
-  }
-`;
 export const Section = styled.div`
   background: rgba(255, 255, 255, 0.05);
   border-radius: 6px;

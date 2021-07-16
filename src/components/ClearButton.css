@@ -10,7 +10,8 @@
   outline: none;
   transition: 0.5s;
   place-items: center;
-  display: flex;
+  padding: 25px;
+  text-align: center;
 }
 
 .clear-btn:hover {

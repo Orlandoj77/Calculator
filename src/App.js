@@ -99,6 +99,7 @@ class App extends Component {
             <h1 style={{ color: "#ffff", fontSize: 15 }}> Calculator</h1>
             <Article className="calculator">
               <Input>{this.state.input}</Input>
+              <label htmlFor="" style={{ fontSize: 30, color: "#FFF" }}></label>
               <ClearButton
                 className="btnlg btnclear"
                 handleClear={this.clearInput}
@@ -112,47 +113,49 @@ class App extends Component {
               <Button type="button" handleClick={this.multiply}>
                 *
               </Button>
+
               <Button type="button" handleClick={this.addToInput}>
                 7
               </Button>
-
               <Button type="button" handleClick={this.addToInput}>
                 8
               </Button>
               <Button type="button" handleClick={this.addToInput}>
                 9
               </Button>
+              <Button type="button" handleClick={this.subtract}>
+                -
+              </Button>
 
               <Button type="button" handleClick={this.addToInput}>
                 4
               </Button>
-              <Button type="button" handleClick={this.subtract}>
-                -
-              </Button>
+
               <Button type="button" handleClick={this.addToInput}>
                 5
               </Button>
+
               <Button type="button" handleClick={this.addToInput}>
                 6
-              </Button>
-              <Button type="button" handleClick={this.addToInput}>
-                1
               </Button>
               <Button type="button" handleClick={this.add}>
                 +
               </Button>
-
+              <Button type="button" handleClick={this.addToInput}>
+                1
+              </Button>
               <Button type="button" handleClick={this.addToInput}>
                 2
               </Button>
               <Button type="button" handleClick={this.addToInput}>
                 3
               </Button>
-              <Button type="button" handleClick={this.addZeroToInput}>
-                0
-              </Button>
               <Button class="btnlg" type="button" handleClick={this.evaluate}>
                 =
+              </Button>
+
+              <Button type="button" handleClick={this.addZeroToInput}>
+                0
               </Button>
               <Button type="button" handleClick={this.addDecimal}>
                 .

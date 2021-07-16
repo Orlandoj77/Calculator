@@ -96,10 +96,15 @@ class App extends Component {
       <Div className="calc-wrapper">
         <Box className="App">
           <Section>
-            <h1>Calculator</h1>
+            <h1 style={{ color: "#ffff", fontSize: 15 }}> Calculator</h1>
             <Article className="row">
               <Input>{this.state.input}</Input>
-
+              <ClearButton
+                className="btnlg btnclear"
+                handleClear={this.clearInput}
+              >
+                C
+              </ClearButton>
               <Button type="button" handleClick={this.addToInput}>
                 7
               </Button>
@@ -136,19 +141,18 @@ class App extends Component {
               <Button type="button" handleClick={this.add}>
                 +
               </Button>
-              <Button type="button" handleClick={this.addDecimal}>
-                .
+              <Button type="button" handleClick={this.subtract}>
+                -
               </Button>
               <Button type="button" handleClick={this.addZeroToInput}>
                 0
               </Button>
-              <Button type="button" handleClick={this.evaluate}>
+              <Button class="btnlg" type="button" handleClick={this.evaluate}>
                 =
               </Button>
-              <Button type="button" handleClick={this.subtract}>
-                -
+              <Button type="button" handleClick={this.addDecimal}>
+                .
               </Button>
-              <ClearButton handleClear={this.clearInput}>C</ClearButton>
             </Article>
           </Section>
         </Box>
